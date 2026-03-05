@@ -4,7 +4,7 @@ const drawing = p5 => {
         //this is the setup function call
         p5. createCanvas (600, 600);
 
-
+ß
  p5.draw = () => {
 // this is where the drawing will occur.   
     p5. background(40);
@@ -66,7 +66,7 @@ while(circ < 20){
 }
 
 new p5(drawing); */
-/* const drawing = p5 => {
+// /* const drawing = p5 => {
 
     p5.setup = () => {
         p5.createCanvas(600, 600);
@@ -94,4 +94,4 @@ new p5(drawing); */
 }
 
 new p5(drawing);
-*/
+//

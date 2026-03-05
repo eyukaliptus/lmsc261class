@@ -1,4 +1,61 @@
-let minNameLength = true;
+//Ice Cream Shop 2
+/*
+const conesSoldPerHour = 14
+hour1.push(" 12 ");
+hour2.push(" 24 ")
+hour3.push(" 36 ");
+hour4.push(" 48 ");
+hour5.push(" 60 ");
+hour5.push(" 72 ");
+hour6.push(" 84 ");
+hour7.push(" 96 ");
+hour8.push(" 108 ");
+hour9.push(" 120 ");
+hour10.push(" 132 ");
+hour11.push(" 144 ");
+hour12.push(" 156");
+
+print(meals);
+
+print(conesSoldPerHour * hour + " sold at hour " + hour);
+
+
+//Ice Cream Shop 1
+
+/*
+let iceCreamPrice = prompt("Ice Cream Price $100")
+
+let isEnough= Dollars == 100;
+print(isEnoughMoney);
+
+let isEnoughMoney = Dollars > 100;
+
+if(isEnoughMoney) {
+    print("Is enough for Ice Cream"); 
+} else if (isMultiInstrumentalist) {
+    print("Thanks, Enjoy the Ice Cream!");
+
+} else {
+    print("Sorry, not enough money");
+}
+/*
+
+
+/*
+if (isMultiInstrumentalist){
+    print("Wow, you're a multi-instrumentalist!");
+
+} else {
+    print ("I guess you cant be amazing at everything"?);
+
+}
+
+
+
+
+
+
+/* let minNameLength = true;
 let nameInput;
 
 while (minNameLength)
