@@ -48,11 +48,37 @@ const drawing = p5 => {
            let botLeftCoords = [p5.width * 0.3, p5.height * 0.8]
        
        }
-     
+            p5.fill(199);
+
+       p5.circle(p5.mouseX, p5.mouseY, p5.width * 0.1);
        // top
+       p5.noStroke()
+       p5.fill(199);
        let topCoords = [p5.width * 0.5, p5.height * 0.2]
-       let topLeftCoords = [p5.width * 0.4, p5.height * 0.4]
-       let topRightCoords = [p5.width * 0.6, p5.height * 0.4]
+       let topLeftCoords = [p5.width * 0.1, p5.height * 1]
+       let topRightCoords = [p5.width * 0.9, p5.height * 1]
+
+       // base
+       p5.triangle(topCoords[0],
+                    topCoords[1],
+                    topLeftCoords[0],
+                    topLeftCoords[1],
+                    topRightCoords[0],
+                    topRightCoords[1])
+
+        let middleCoords = [p5.width * 0.6, p5.height * 1]
+
+        p5.fill(100, 100, 100, (p5.mouseX/p5.width) * 255);
+        p5.triangle(topCoords[0],
+            topCoords[1],
+            middleCoords[0],
+            middleCoords[1],
+            topRightCoords[0],
+            topRightCoords[1])
+
+       // shadow
+
+       /*
        p5.line(topLeftCoords[0], topLeftCoords[1],
            topCoords[0], topCoords[1]
        );
@@ -66,7 +92,7 @@ const drawing = p5 => {
        p5.line(topRightCoords[0], topRightCoords[1],
            topLeftCoords[0], topLeftCoords[1]
        );
-
+       */
 
    }
 
