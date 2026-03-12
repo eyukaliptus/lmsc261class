@@ -1,4 +1,4 @@
-let isSmallMountain = false;
+let isSunny = false;
 
 
 const drawing = p5 => {
@@ -18,13 +18,9 @@ const drawing = p5 => {
        p5.strokeWeight(2)
     
 
-
-       let botLeftArcCoords = [p5.width * 0.9999, p5.height * 0.2];
-       let botRightArcCoords = [p5.width * 0.7, p5.height * 0.7];
-       let topLeftArcCoords = [p5.width * 0.4, p5.height * 0.5];
-       let topRightArcCoords = [p5.width * 0.6, p5.height * 0.5];
-      
-       let leftArcStart = Math.PI * 0.5;
+        //moon
+    
+       let leftArcStart = Math.PI * -0.5;
        let leftArcEnd = leftArcStart + Math.PI;
 
 
@@ -33,10 +29,9 @@ const drawing = p5 => {
        let arcSize = p5.height * 0.2;
       
 
-       if (!isSmallMountain){
-           p5.arc(botLeftArcCoords[0],
-               botLeftArcCoords[1],
-               arcSize,
+       if (!isSunny){
+         
+               (arcSize,
                arcSize,
                leftArcStart,
                leftArcEnd);
@@ -48,7 +43,7 @@ const drawing = p5 => {
            let botLeftCoords = [p5.width * 0.3, p5.height * 0.8]
        
        }
-            p5.fill(199);
+            p5.fill(250, 250, 20);
 
        p5.circle(p5.mouseX, p5.mouseY, p5.width * 0.1);
        // top
@@ -58,7 +53,21 @@ const drawing = p5 => {
        let topLeftCoords = [p5.width * 0.1, p5.height * 1]
        let topRightCoords = [p5.width * 0.9, p5.height * 1]
 
-       // base
+       p5.line(topLeftCoords[0], topLeftCoords[1],
+           topCoords[0], topCoords[1]
+       );
+
+
+       p5.line(topRightCoords[0], topRightCoords[1],
+           topCoords[0], topCoords[1]
+       );
+
+
+       p5.line(topRightCoords[0], topRightCoords[1],
+           topLeftCoords[0], topLeftCoords[1]
+       );
+       
+       
        p5.triangle(topCoords[0],
                     topCoords[1],
                     topLeftCoords[0],
@@ -75,8 +84,26 @@ const drawing = p5 => {
             middleCoords[1],
             topRightCoords[0],
             topRightCoords[1])
+     
+    p5.triangle(topCoords[3],
+                    topCoords[3],
+                    topLeftCoords[2],
+                    topLeftCoords[3],
+                    topRightCoords[2],
+                    topRightCoords[3])
 
-       // shadow
+        let leftTriangleCoords = [p5.width * 0.6, p5.height * 1]
+
+        p5.fill(200, 30, 300, (p5.mouseX/p5.width) * 255);
+        p5.triangle(topCoords[3],
+                    topCoords[3],
+                    topLeftCoords[2],
+                    topLeftCoords[3],
+                    topRightCoords[2],
+                    topRightCoords[3])
+    
+
+         // shadow
 
        /*
        p5.line(topLeftCoords[0], topLeftCoords[1],
@@ -100,6 +127,7 @@ const drawing = p5 => {
    p5.mousePressed = () => {
        console.log("Mouse Pressed!");
    }
+
 }
 
 
