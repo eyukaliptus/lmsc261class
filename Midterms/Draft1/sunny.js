@@ -31,6 +31,17 @@ function drawMountain(p5, x, y, width, height)
             topRightCoords[1])
 }
         //******** SCAFFOLDING *********//
+
+function drawSky(p5)
+{
+        let mouseNorm = 1 - (p5.mouseY/p5.height);
+        let skyR = p5.lerp(0,70, mouseNorm);
+        let skyG = p5.lerp(0, 150, mouseNorm);
+        let skyB = p5.lerp(0, 255, mouseNorm);
+
+       p5.background(skyR, skyG, skyB);
+
+}
 const drawing = p5 => {
 
 
@@ -41,18 +52,8 @@ const drawing = p5 => {
 
 
    p5.draw = () => {
-       p5.background(20, 20, 255)
-    function setup() {
-  {
-   p5.lerpColor
-let interA = lerpColor(from, to, 0.33);
-  let interB = lerpColor(from, to, 0.66);
 
-  }
-}
-
-
-
+        drawSky(p5);
        p5.strokeWeight(2)
   
        //******** SUN *********//
